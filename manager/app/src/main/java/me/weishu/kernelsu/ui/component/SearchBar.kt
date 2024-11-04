@@ -6,6 +6,7 @@ import androidx.activity.compose.LocalOnBackPressedDispatcherOwner
 import androidx.compose.animation.Animatable
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.fadeIn
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -153,7 +154,10 @@ private fun SearchBox(
         ConstraintLayout(
             modifier = Modifier
                 .padding(8.dp)
-                .border(1.5f.dp, MaterialTheme.colorScheme.outline, MaterialTheme.shapes.extraLarge)
+                .background(
+                    color = MaterialTheme.colorScheme.surfaceContainerHigh,
+                    shape = MaterialTheme.shapes.extraLarge
+                )
         ) {
             val (leadingIconRef, textFieldRef, trailingIconRef) = createRefs()
 
